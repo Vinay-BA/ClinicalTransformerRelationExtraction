@@ -12,7 +12,7 @@ nmd=./new_model
 pof=./predictions.txt
 log=./log.txt
 
-python ./src/relation_extraction.py \
+python3 ./src/relation_extraction.py \
 		--model_type $model_type \
 		--data_format_mode $dfmm \
 		--classification_scheme $sc \
@@ -41,7 +41,7 @@ python ./src/relation_extraction.py \
 
 # example of testing and convert predictions to brat
 export CUDA_VISIBLE_DEVICES=1
-python ./src/relation_extraction.py \
+python3 ./src/relation_extraction.py \
 		--model_type $model_type \
 		--data_format_mode $dfmm \
 		--classification_scheme $sc \
@@ -68,7 +68,7 @@ python ./src/relation_extraction.py \
 
 edr="./data_annotation_entity_only"
 pod="./predicted_results"
-python src/data_processing/post_processing.py \
+python3 src/data_processing/post_processing.py \
 		--mode mul \
 		--predict_result_file $pof \
 		--entity_data_dir $edr \
