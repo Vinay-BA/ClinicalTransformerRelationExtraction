@@ -18,7 +18,7 @@ sys.path.append(Path(os.path.abspath(__file__)).parent.as_posix()) #newly added 
 
 import argparse
 import numpy as np
-from src.utils import TransformerLogger
+from utils import TransformerLogger
 from data_processing.io_utils import load_text, save_text, pkl_load
 from collections import defaultdict
 from data_processing.data_format_conf import NON_RELATION_TAG, BRAT_REL_TEMPLATE
