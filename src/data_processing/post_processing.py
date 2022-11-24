@@ -13,6 +13,9 @@ import os
 import sys
 from pathlib import Path
 
+sys.path.append(Path(os.path.abspath(__file__)).parent.parent.as_posix())
+sys.path.append(Path(os.path.abspath(__file__)).parent.as_posix()) #newly added path to import logger from upper level dir
+
 import argparse
 import numpy as np
 from src.utils import TransformerLogger
@@ -20,9 +23,6 @@ from data_processing.io_utils import load_text, save_text, pkl_load
 from collections import defaultdict
 from data_processing.data_format_conf import NON_RELATION_TAG, BRAT_REL_TEMPLATE
 import traceback
-
-
-sys.path.append(Path(os.path.abspath(__file__)).parent.parent.as_posix())
 
 
 def load_mappings(map_file):
